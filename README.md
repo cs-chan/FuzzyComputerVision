@@ -24,7 +24,7 @@ A toolbox for Fuzzy Computer Vision. This is part of the tutorial that is going 
     ii.	Type “pip install scikit-learn”
     iii.	Web reference: http://scikit-learn.org/stable/
     
-    ![demo](GIF/TFSCH.gif)
+    ![demo](gif/TFSCH.gif)
     
 ## Citation 
 ```sh
