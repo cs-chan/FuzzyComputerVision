@@ -27,6 +27,7 @@ A toolbox for Fuzzy Computer Vision. This is part of the tutorial that is going 
     ![demo](gif/TFSCH.gif)
     
 ## Citation 
+If you find this code useful for your research, please cite
 ```sh
 @article{LimRC14,
   author    = {Chern Hong Lim and Anhar Risnumawan and Chee Seng Chan},
