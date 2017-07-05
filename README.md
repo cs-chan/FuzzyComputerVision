@@ -1,5 +1,5 @@
 # FuzzyComputerVision
-A toolbox for Fuzzy Computer Vision
+A toolbox for Fuzzy Computer Vision. This is part of the tutorial that is going to present in FUZZ-IEEE 2017, Naples, Italy. 
 Release on July, 2017
 
 # Description
@@ -25,7 +25,7 @@ This is the implementation of our Fuzzy Computer Vision Toolbox. There are a few
     iii.	Web reference: http://scikit-learn.org/stable/
 
 # Feedback
-Suggestions and opinions of this work (both positive and negative) are greatly welcome. Please contact the authors by sending email to Chern Hong Lim at chlim@acd.tarc.edu.my or Chee Seng Chan at cs.chan@um.edu.my
+Suggestions and opinions of this work (both positive and negative) are greatly welcome. Please contact the authors by sending email to Chern Hong Lim at `chlim at acd.tarc.edu.my` or Chee Seng Chan at `cs.chan at um.edu.my`
 
 # License
 BSD-3, see LICENSE file for details.
