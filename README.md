@@ -1,6 +1,6 @@
 # Fuzzy Computer Vision Toolbox
 
-Release on July, 2017
+Release on July 05, 2017
 
 # Description
 A toolbox for Fuzzy Computer Vision. This is part of the tutorial that is going to be presented in FUZZ-IEEE 2017, Naples, Italy, as well as the implementation of our TFS work with titled [Scene Image is Non-Mutually Exclusive - A Fuzzy Qualitative Scene Understanding](http://cs-chan.com/doc/TFS2014.pdf). There are a few prerequisites before you start this practical, please ensure you have installed the following toolboxes or libraries in your computer. You may follow the steps below for installation:
