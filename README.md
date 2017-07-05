@@ -25,7 +25,7 @@ This is the implementation of our Fuzzy Computer Vision Toolbox. There are a few
     iii.	Web reference: http://scikit-learn.org/stable/
 
 # Feedback
-Suggestions and opinions of this work (both positive and negative) are greatly welcome. Please contact the authors by sending email to Chern Hong Lim at acd.tarc.edu.my or Chee Seng Chan at cs.chan@um.edu.my
+Suggestions and opinions of this work (both positive and negative) are greatly welcome. Please contact the authors by sending email to Chern Hong Lim at chlim@acd.tarc.edu.my or Chee Seng Chan at cs.chan@um.edu.my
 
 # License
 BSD-3, see LICENSE file for details.
