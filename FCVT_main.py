@@ -105,11 +105,11 @@ descriptor = fcvt.FE_Quantisation(imageKeyPoint[1], cluster[0])
 """""""""""""""""""""
 Image classification
 """"""""""""""""""""" 
-Output_crisp = fcvt.Image_Classification('Training_doc', 'Testing_doc', 'SIFT', 'Crisp')
-Output_fuzzy = fcvt.Image_Classification('Training_doc', 'Testing_doc', 'SIFT', 'Fuzzy')
+Output_crisp = fcvt.Image_Classification('Training', 'Testing', 'SIFT', 'Crisp')
+Output_fuzzy = fcvt.Image_Classification('Training', 'Testing2', 'SIFT', 'Fuzzy')
 
-Output_fuzzy = fcvt.Image_Classification('Training_doc', 'Testing_doc', 'LBP', 'Crisp')
-Output_fuzzy = fcvt.Image_Classification('Training_doc', 'Testing_doc', 'LBP', 'Fuzzy')
+Output_fuzzy = fcvt.Image_Classification('Training', 'Testing', 'LBP', 'Crisp')
+Output_fuzzy = fcvt.Image_Classification('Training', 'Testing', 'LBP', 'Fuzzy')
 
 
 

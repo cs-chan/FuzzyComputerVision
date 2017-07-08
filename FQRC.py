@@ -163,7 +163,9 @@ def histVisualize(fqmf, fqmf_mu):
     if(type(fqmf) is list):
         J = len(fqmf_mu[0]) #num of feature
         K = len(fqmf_mu) #num of class        
-        fig, axes = plt.subplots(J, K, figsize=(8,8))
+        fig, axes = plt.subplots(J, K, figsize=(6,J*2))
+#        fig.subplots_adjust(top=0.85)
+#        fig..autoscale_view(True,True,True)
         fig.tight_layout()
         for k in range(0,K):
             mf = fqmf[k]
@@ -222,7 +224,7 @@ def mfVisualize(fqmf):
     if(type(fqmf) is list): # to solve issue if only one class in the mf
         J = len(fqmf[0]) #num of feature
         K = len(fqmf) #num of class        
-        fig, axes = plt.subplots(J, K, figsize=(8,8))
+        fig, axes = plt.subplots(J, K, figsize=(6,J*2))
         fig.tight_layout()
         for k in range(0,K):
             mf = fqmf[k]
@@ -239,7 +241,7 @@ def mfVisualize(fqmf):
                 datay = np.array([0,1,1,0])
                 axes[j,k].plot(datax,datay)
                 axes[j,k].set_xlim(xmin,xmax)
-                axes[j,k].set_ylim(0,1.1)
+                axes[j,k].set_ylim(0,1.1)                         
 #                plt.ylabel('Degree of Membership')
 #                plt.axis([-1, 10, 0, 1.1])
 #                plt.show() 
@@ -271,22 +273,23 @@ def infVisualize(feaVec, fqmf, feaDegreeMF):
     if(type(fqmf) is list): # to solve issue if only one class in the mf
         J = len(fqmf[0]) #num of feature
         K = len(fqmf) #num of class        
-        fig, axes = plt.subplots(J, figsize=(8,8))
+        fig, axes = plt.subplots(J, figsize=(4,J*1.5))
         fig.tight_layout()
-        xminFinal = 0
-        xmaxFinal = 0
         
-        for j in range(0,J):            
+        
+        for j in range(0,J):  
+#            xminFinal = 0
+#            xmaxFinal = 0
             for k in range(0,K):
                 mf = fqmf[k]
-                xmin = np.amin(mf[:,0:2])-np.amax(mf[:,2:4])
-                xmax = np.amax(mf[:,0:2])+np.amax(mf[:,2:4])
-                
-                if(xmin < xminFinal):
-                    xminFinal = xmin
-                
-                if(xmax > xmaxFinal):
-                    xmaxFinal = xmax
+#                xmin = np.amin(mf[:,0:2])-np.amax(mf[:,2:4])
+#                xmax = np.amax(mf[:,0:2])+np.amax(mf[:,2:4])
+#                
+#                if(xmin < xminFinal):
+#                    xminFinal = xmin
+#                
+#                if(xmax > xmaxFinal):
+#                    xmaxFinal = xmax
                     
                 c = mf[j,0] - mf[j,2]
                 a = mf[j,0]
@@ -299,12 +302,13 @@ def infVisualize(feaVec, fqmf, feaDegreeMF):
                 
             axes[j].legend((feaDegreeMF[:,j]))                
             axes[j].set_title("Degree of Membership")
+#            axes[j].set_xlim(xminFinal,xmaxFinal)            
 
         for j in range(0,J):
             axes[j].plot([feaVec[j],feaVec[j]],[0,1.1],'r--')
         
         for (n), subplot in np.ndenumerate(axes):
-            subplot.set_xlim(xminFinal,xmaxFinal)
+#            subplot.set_xlim(xminFinal,xmaxFinal)
             subplot.set_ylim(0,1.1)        
          
     else:
@@ -373,7 +377,7 @@ Test inference
 #feaVec = np.array([2.5,4.5,9.5]) # New input with feature values
 #output,feaDegreeMF = inference(feaVec, mf_all)
 #infVisualize(feaVec, mf_all, feaDegreeMF)
-
+#print output
 
 
 """""""""""""""""""""
@@ -381,9 +385,11 @@ Test CL_FQRC_Train and CL_FQRC_Predict
 """""""""""""""""""""
 #a = np.array([(1,4,6),(2,5,7),(2,5,8),(3,4,8),(3,5,7),(2,6,9),(4,6,9),(4,7,10),(3,7,11),(5,7,10),(4,8,10),(5,8,11)])
 #a_groundTruth = np.array([0,0,0,0,0,0,1,1,1,1,1,1])
-#fqmf = CL_FQRC_Train(a, a_groundTruth, 3, True)
-#feaVec = np.array([2.5,4.5,9.5]) %--> new testing input
-#output = CL_FQRC_Predict(feaVec, fqmf, True)
+#
+#fqmf = CL_FQRC_Train(a, a_groundTruth, 3, True) # Training step
+#
+#feaVec = np.array([2.5,4.5,9.5]) #--> new testing input
+#output = CL_FQRC_Predict(feaVec, fqmf, True) # Prediction step
 #print 'output:' + str(output)
 
 
